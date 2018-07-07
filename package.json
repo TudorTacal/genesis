@@ -1,0 +1,29 @@
+{
+  "name": "genesis",
+  "version": "1.0.0",
+  "description": "My coolest personal website build from scratch using cutting edge full JS stack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "redux",
+    "node",
+    "graphql",
+    "css-grid",
+    "docker",
+    "styled-componets",
+    "auth2"
+  ],
+  "author": "Tudor Tacal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
