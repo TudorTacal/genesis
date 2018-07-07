@@ -4,7 +4,7 @@
   "description": "My coolest personal website build from scratch using cutting edge full JS stack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server/server.js --exec babel-node"
   },
   "keywords": [
     "javascript",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.17.5"
   }
 }
