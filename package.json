@@ -4,7 +4,8 @@
   "description": "My coolest personal website build from scratch using cutting edge full JS stack.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server/server.js --exec babel-node"
+    "start": "nodemon src/server/server.js --exec babel-node",
+    "heroku": "git push heroku master"
   },
   "keywords": [
     "javascript",
