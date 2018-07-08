@@ -1,1 +1,11 @@
-{ "presets": ["env"] }
+{
+  "presets": [
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": ["last 3 versions"],
+        "node": "current"
+      }
+    }]
+  ]
+}

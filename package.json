@@ -4,7 +4,10 @@
   "description": "My coolest personal website build from scratch using cutting edge full JS stack.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server/server.js --exec babel-node",
+    "start": "concurrently -k -r 'npm run start:webpack' 'npm run start:server'",
+    "start:server": "nodemon dist/bundle.js --exec babel-node",
+    "start:webpack": "webpack --mode development --watch",
+    "build": "webpack",
     "heroku": "git push heroku master"
   },
   "keywords": [
@@ -21,11 +24,19 @@
   "author": "Tudor Tacal",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "nodemon": "^1.17.5"
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.6.0",
+    "nodemon": "^1.17.5",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-node-externals": "^1.7.2"
   }
 }
