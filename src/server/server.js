@@ -7,6 +7,8 @@ import { ServerStyleSheet } from 'styled-components';
 
 const app = express();
 
+app.use(express.static('dist'));
+
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
@@ -16,7 +18,7 @@ app.get('/', (req, res) => {
 
   const styles = sheet.getStyleTags();
 
-  const title = 'Kick starting an Isomorphic React Node Web App';
+  const title = 'Kick starting an Isomorphic React-Node Web App';
   
   res.send(Template(
     {

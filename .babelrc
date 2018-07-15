@@ -3,9 +3,13 @@
     "react",
     ["env", {
       "targets": {
-        "browsers": ["last 3 versions"],
-        "node": "current"
+        "browsers": ["last 3 versions"]
       }
     }]
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-object-rest-spread",
+    ["babel-plugin-styled-components" , { "ssr": true }]
   ]
 }

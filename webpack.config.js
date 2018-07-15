@@ -3,11 +3,13 @@ const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 
 module.exports = {
-  target: 'node',
-  entry: './src/server/server.js',
+  devtool: 'source-map',
+  mode: 'development',
+  entry: './src/client/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -17,9 +19,9 @@ module.exports = {
           loader: 'babel-loader',
         },
         exclude: /node_modules/,
-      }
+      },
     ]
-  }
+  },
 }
 
 
