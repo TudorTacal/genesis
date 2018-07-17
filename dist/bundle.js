@@ -27250,12 +27250,18 @@ var _styledComponents = __webpack_require__(/*! styled-components */ "./node_mod
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _content = __webpack_require__(/*! ./content/content */ "./src/client/content/content.js");
+
+var _content2 = _interopRequireDefault(_content);
+
+var _gridUnit = __webpack_require__(/*! ../measures/grid-unit */ "./src/measures/grid-unit.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var StyledApp = _styledComponents2.default.div.withConfig({
   displayName: 'app__StyledApp',
   componentId: 'jw37k0-0'
-})(['display:grid;']);
+})(['display:grid;grid-template-columns:repeat(24,1fr);']);
 
 var App = function (_React$Component) {
   (0, _inherits3.default)(App, _React$Component);
@@ -27266,22 +27272,12 @@ var App = function (_React$Component) {
   }
 
   (0, _createClass3.default)(App, [{
-    key: 'press',
-    value: function press() {
-      console.log('The button was pressed');
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         StyledApp,
         null,
-        'Header',
-        _react2.default.createElement(
-          'button',
-          { onClick: this.press },
-          'Press me'
-        )
+        _react2.default.createElement(_content2.default, null)
       );
     }
   }]);
@@ -27289,6 +27285,53 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = App;
+
+/***/ }),
+
+/***/ "./src/client/content/content.js":
+/*!***************************************!*\
+  !*** ./src/client/content/content.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _gridUnit = __webpack_require__(/*! ../../measures/grid-unit */ "./src/measures/grid-unit.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var StyledContent = _styledComponents2.default.div.withConfig({
+  displayName: 'content__StyledContent',
+  componentId: 's276so7-0'
+})(['grid-column:2 / 11;text-align:center;place-self:center stretch;font-family:Futura;font-size:', ';color:#3e3f3d;border-bottom:', ' solid #3e3f3d;margin-top:', ';'], (0, _gridUnit.um)(12), (0, _gridUnit.um)(0.8), (0, _gridUnit.um)(18));
+
+var Content = function Content() {
+  return _react2.default.createElement(
+    _react2.default.Fragment,
+    null,
+    _react2.default.createElement(
+      StyledContent,
+      null,
+      'I\'m Tudor Tacal'
+    )
+  );
+};
+
+exports.default = Content;
 
 /***/ }),
 
@@ -27315,6 +27358,25 @@ var _app2 = _interopRequireDefault(_app);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.hydrate)(_react2.default.createElement(_app2.default, null), document.getElementById('app'));
+
+/***/ }),
+
+/***/ "./src/measures/grid-unit.js":
+/*!***********************************!*\
+  !*** ./src/measures/grid-unit.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var um = exports.um = function um(units) {
+  return 6 * units + "px";
+};
 
 /***/ })
 

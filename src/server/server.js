@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
   const styles = sheet.getStyleTags();
 
-  const title = 'Kick starting an Isomorphic React-Node Web App';
+  const title = 'Tudor Tacal';
   
   res.send(Template(
     {
