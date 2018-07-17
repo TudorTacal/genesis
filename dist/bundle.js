@@ -27317,7 +27317,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var StyledContent = _styledComponents2.default.div.withConfig({
   displayName: 'content__StyledContent',
   componentId: 's276so7-0'
-})(['grid-column:2 / 11;text-align:center;place-self:center stretch;font-family:Futura;font-size:', ';color:#3e3f3d;border-bottom:', ' solid #3e3f3d;margin-top:', ';'], (0, _gridUnit.um)(12), (0, _gridUnit.um)(0.8), (0, _gridUnit.um)(18));
+})(['grid-column:2 / 12;text-align:center;place-self:center stretch;font-family:Futura;font-size:', ';color:#3e3f3d;border-bottom:', ' solid #3e3f3d;margin-top:', ';line-height:1.4;font-weight:bold;'], (0, _gridUnit.um)(12), (0, _gridUnit.um)(1), (0, _gridUnit.um)(18));
 
 var Content = function Content() {
   return _react2.default.createElement(
