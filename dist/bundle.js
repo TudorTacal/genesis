@@ -27261,7 +27261,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var StyledApp = _styledComponents2.default.div.withConfig({
   displayName: 'app__StyledApp',
   componentId: 'jw37k0-0'
-})(['display:grid;grid-template-columns:repeat(24,1fr);']);
+})(['display:grid;grid-template-columns:repeat(24,1fr);grid-template-rows:repeat(12,1fr);']);
 
 var App = function (_React$Component) {
   (0, _inherits3.default)(App, _React$Component);
@@ -27314,17 +27314,17 @@ var _gridUnit = __webpack_require__(/*! ../../measures/grid-unit */ "./src/measu
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledContent = _styledComponents2.default.div.withConfig({
-  displayName: 'content__StyledContent',
+var StyledTitle = _styledComponents2.default.div.withConfig({
+  displayName: 'content__StyledTitle',
   componentId: 's276so7-0'
-})(['grid-column:2 / 12;text-align:center;place-self:center stretch;font-family:Futura;font-size:', ';color:#3e3f3d;border-bottom:', ' solid #3e3f3d;margin-top:', ';line-height:1.4;font-weight:bold;'], (0, _gridUnit.um)(12), (0, _gridUnit.um)(1), (0, _gridUnit.um)(18));
+})(['grid-column:2 / 12;grid-row:2 / 3;text-align:center;place-self:center stretch;font-family:Futura;font-size:', ';color:#3e3f3d;border-bottom:', ' solid #3e3f3d;line-height:1.4;font-weight:bold;'], (0, _gridUnit.um)(12), (0, _gridUnit.um)(1));
 
 var Content = function Content() {
   return _react2.default.createElement(
     _react2.default.Fragment,
     null,
     _react2.default.createElement(
-      StyledContent,
+      StyledTitle,
       null,
       'I\'m Tudor Tacal'
     )
