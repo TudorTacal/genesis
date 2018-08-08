@@ -27254,14 +27254,12 @@ var _content = __webpack_require__(/*! ./content/content */ "./src/client/conten
 
 var _content2 = _interopRequireDefault(_content);
 
-var _gridUnit = __webpack_require__(/*! ../measures/grid-unit */ "./src/measures/grid-unit.js");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var StyledApp = _styledComponents2.default.div.withConfig({
   displayName: 'app__StyledApp',
   componentId: 'jw37k0-0'
-})(['display:grid;grid-template-columns:repeat(24,1fr);grid-template-rows:repeat(12,1fr);']);
+})(['display:grid;grid-template-columns:repeat(auto-fit,1fr 3fr 1fr);']);
 
 var App = function (_React$Component) {
   (0, _inherits3.default)(App, _React$Component);
@@ -27310,18 +27308,21 @@ var _styledComponents = __webpack_require__(/*! styled-components */ "./node_mod
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _gridUnit = __webpack_require__(/*! ../../measures/grid-unit */ "./src/measures/grid-unit.js");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledTitle = _styledComponents2.default.div.withConfig({
+var StyledTitle = _styledComponents2.default.h1.withConfig({
   displayName: 'content__StyledTitle',
   componentId: 's276so7-0'
-})(['grid-column:2 / 12;grid-row:2 / 3;text-align:center;place-self:center stretch;font-family:Futura;font-size:', ';color:#3e3f3d;border-bottom:', ' solid #3e3f3d;line-height:1.4;font-weight:bold;'], (0, _gridUnit.um)(12), (0, _gridUnit.um)(1));
+})(['grid-column:2 / 3;font-family:Futura;font-size:5rem;color:#3e3f3d;border-bottom:6px solid #3e3f3d;line-height:1.4;font-weight:bold;']);
+
+var StyledContent = _styledComponents2.default.div.withConfig({
+  displayName: 'content__StyledContent',
+  componentId: 's276so7-1'
+})(['display:grid;grid-template-columns:1fr 2fr 1fr;']);
 
 var Content = function Content() {
   return _react2.default.createElement(
-    _react2.default.Fragment,
+    StyledContent,
     null,
     _react2.default.createElement(
       StyledTitle,
@@ -27358,25 +27359,6 @@ var _app2 = _interopRequireDefault(_app);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.hydrate)(_react2.default.createElement(_app2.default, null), document.getElementById('app'));
-
-/***/ }),
-
-/***/ "./src/measures/grid-unit.js":
-/*!***********************************!*\
-  !*** ./src/measures/grid-unit.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var um = exports.um = function um(units) {
-  return 6 * units + "px";
-};
 
 /***/ })
 

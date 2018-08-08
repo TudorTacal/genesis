@@ -1,27 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { um } from '../../measures/grid-unit';
 
-const StyledTitle = styled.div`
-  grid-column: 2 / 12;
-  grid-row: 2 / 3;
-  text-align: center;
-  place-self: center stretch;
+const StyledTitle = styled.h1`
+  grid-column: 2 / 3;
   font-family: Futura;
-  font-size: ${um(12)};
+  font-size: 5rem;
   color: #3e3f3d;
-  border-bottom: ${um(1)} solid #3e3f3d;
+  border-bottom: 6px solid #3e3f3d;
   line-height: 1.4;
   font-weight: bold;
 `;
 
+const StyledContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+`;
+
 const Content = () => {
   return (
-    <React.Fragment>
+    <StyledContent>
       <StyledTitle>
         I'm Tudor Tacal
       </StyledTitle>
-    </React.Fragment>
+    </StyledContent>
   );
 };
 
