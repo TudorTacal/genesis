@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledTitle = styled.h1`
-  grid-column: 2 / 3;
   font-family: Futura;
-  font-size: 5rem;
+  font-size: 50px;
   color: #3e3f3d;
   border-bottom: 6px solid #3e3f3d;
   line-height: 1.4;
@@ -12,8 +11,7 @@ const StyledTitle = styled.h1`
 `;
 
 const StyledContent = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
 `;
 
 const Content = () => {
@@ -27,3 +25,6 @@ const Content = () => {
 };
 
 export default Content;
+// create a proper html template
+// add the device width tag
+// define the font size of the root element to 16px then use rem consistently

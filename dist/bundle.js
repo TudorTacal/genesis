@@ -27259,7 +27259,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var StyledApp = _styledComponents2.default.div.withConfig({
   displayName: 'app__StyledApp',
   componentId: 'jw37k0-0'
-})(['display:grid;grid-template-columns:repeat(auto-fit,1fr 3fr 1fr);']);
+})(['padding:50px;']);
 
 var App = function (_React$Component) {
   (0, _inherits3.default)(App, _React$Component);
@@ -27313,12 +27313,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var StyledTitle = _styledComponents2.default.h1.withConfig({
   displayName: 'content__StyledTitle',
   componentId: 's276so7-0'
-})(['grid-column:2 / 3;font-family:Futura;font-size:5rem;color:#3e3f3d;border-bottom:6px solid #3e3f3d;line-height:1.4;font-weight:bold;']);
+})(['font-family:Futura;font-size:50px;color:#3e3f3d;border-bottom:6px solid #3e3f3d;line-height:1.4;font-weight:bold;']);
 
 var StyledContent = _styledComponents2.default.div.withConfig({
   displayName: 'content__StyledContent',
   componentId: 's276so7-1'
-})(['display:grid;grid-template-columns:1fr 2fr 1fr;']);
+})(['display:flex;']);
 
 var Content = function Content() {
   return _react2.default.createElement(
@@ -27333,6 +27333,9 @@ var Content = function Content() {
 };
 
 exports.default = Content;
+// create a proper html template
+// add the device width tag
+// define the font size of the root element to 16px then use rem consistently
 
 /***/ }),
 

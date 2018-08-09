@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import StyledContent from './content/content';
 
 const StyledApp = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr 3fr 1fr);
+  padding: 50px;
 `;
 
 class App extends React.Component {
