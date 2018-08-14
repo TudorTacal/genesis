@@ -1,30 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from '../presentational/link';
 
-const StyledTitle = styled.h1`
+const Title = styled.h1`  
+  display: inline-block;
   font-family: Futura;
-  font-size: 50px;
+  font-size: 3rem;
   color: #3e3f3d;
   border-bottom: 6px solid #3e3f3d;
   line-height: 1.4;
   font-weight: bold;
 `;
 
-const StyledContent = styled.div`
-  display: flex;
+const ContentContainer = styled.div`
+  display: block;
+`;
+
+const Body = styled.p`
+  font-family: Cutive Mono;
+  font-size: 2rem;
+  color: #3e3f3d;
 `;
 
 const Content = () => {
   return (
-    <StyledContent>
-      <StyledTitle>
+    <ContentContainer>
+      <Title>
         I'm Tudor Tacal
-      </StyledTitle>
-    </StyledContent>
+      </Title>
+      <Body>  
+        Full Stack Javascript developer at <Link href="www.mendeley.com" title="Mendeley"/>. 
+        At the moment I'm learning all the in's and out's of web development while 
+        preparing to become a dad. Exciting times!
+      </Body>
+    </ContentContainer>
   );
 };
 
 export default Content;
-// create a proper html template
-// add the device width tag
-// define the font size of the root element to 16px then use rem consistently

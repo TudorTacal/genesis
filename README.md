@@ -16,4 +16,5 @@ TODOS:
 
 - check the ESLint altervative recommended by Andy or try JSLint
 - setup webpack-dev-server
+- add emoji library
 

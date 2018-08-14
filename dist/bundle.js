@@ -27256,10 +27256,10 @@ var _content2 = _interopRequireDefault(_content);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledApp = _styledComponents2.default.div.withConfig({
-  displayName: 'app__StyledApp',
+var AppContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'app__AppContainer',
   componentId: 'jw37k0-0'
-})(['padding:50px;']);
+})(['padding:25px;']);
 
 var App = function (_React$Component) {
   (0, _inherits3.default)(App, _React$Component);
@@ -27273,7 +27273,7 @@ var App = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        StyledApp,
+        AppContainer,
         null,
         _react2.default.createElement(_content2.default, null)
       );
@@ -27308,34 +27308,47 @@ var _styledComponents = __webpack_require__(/*! styled-components */ "./node_mod
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _link = __webpack_require__(/*! ../presentational/link */ "./src/client/presentational/link.js");
+
+var _link2 = _interopRequireDefault(_link);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledTitle = _styledComponents2.default.h1.withConfig({
-  displayName: 'content__StyledTitle',
+var Title = _styledComponents2.default.h1.withConfig({
+  displayName: 'content__Title',
   componentId: 's276so7-0'
-})(['font-family:Futura;font-size:50px;color:#3e3f3d;border-bottom:6px solid #3e3f3d;line-height:1.4;font-weight:bold;']);
+})(['   display:inline-block;font-family:Futura;font-size:3rem;color:#3e3f3d;border-bottom:6px solid #3e3f3d;line-height:1.4;font-weight:bold;']);
 
-var StyledContent = _styledComponents2.default.div.withConfig({
-  displayName: 'content__StyledContent',
+var ContentContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'content__ContentContainer',
   componentId: 's276so7-1'
-})(['display:flex;']);
+})(['display:block;']);
+
+var Body = _styledComponents2.default.p.withConfig({
+  displayName: 'content__Body',
+  componentId: 's276so7-2'
+})(['font-family:Cutive Mono;font-size:2rem;color:#3e3f3d;']);
 
 var Content = function Content() {
   return _react2.default.createElement(
-    StyledContent,
+    ContentContainer,
     null,
     _react2.default.createElement(
-      StyledTitle,
+      Title,
       null,
       'I\'m Tudor Tacal'
+    ),
+    _react2.default.createElement(
+      Body,
+      null,
+      'Full Stack Javascript developer at ',
+      _react2.default.createElement(_link2.default, { href: 'www.mendeley.com', title: 'Mendeley' }),
+      '. At the moment I\'m learning all the in\'s and out\'s of web development while preparing to become a dad. Exciting times!'
     )
   );
 };
 
 exports.default = Content;
-// create a proper html template
-// add the device width tag
-// define the font size of the root element to 16px then use rem consistently
 
 /***/ }),
 
@@ -27361,7 +27374,47 @@ var _app2 = _interopRequireDefault(_app);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.hydrate)(_react2.default.createElement(_app2.default, null), document.getElementById('app'));
+(0, _reactDom.hydrate)(_react2.default.createElement(_app2.default, null), document.getElementById('root'));
+
+/***/ }),
+
+/***/ "./src/client/presentational/link.js":
+/*!*******************************************!*\
+  !*** ./src/client/presentational/link.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Link;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Link(props) {
+  return _react2.default.createElement(
+    StyledLink,
+    { className: '', href: props.href },
+    props.title
+  );
+}
+
+var StyledLink = _styledComponents2.default.a.withConfig({
+  displayName: 'link__StyledLink',
+  componentId: 's1n54mjk-0'
+})(['color:#3e3f3d;text-decoration:none;line-height:inherit;border-bottom:1px solid #787a76;transition:all .05s ease-in-out;']);
 
 /***/ })
 

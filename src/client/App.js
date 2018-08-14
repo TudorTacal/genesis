@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import StyledContent from './content/content';
+import Content from './content/content';
 
-const StyledApp = styled.div`
-  padding: 50px;
+const AppContainer = styled.div`
+  padding: 25px;
 `;
 
 class App extends React.Component {
   render() {
     return (
-      <StyledApp>
-        <StyledContent />
-      </StyledApp>
+      <AppContainer>
+        <Content />
+      </AppContainer>
     )
   }
 }
