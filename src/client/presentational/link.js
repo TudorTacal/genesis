@@ -3,7 +3,12 @@ import styled from 'styled-components';
 
 export default function Link(props) {
   return (
-    <StyledLink className="" href={props.href}>{props.title}</StyledLink>
+    <StyledLink 
+      href={props.href}
+      target="_blank"
+    >
+      {props.title}
+    </StyledLink>
   )
 }
 
@@ -13,5 +18,10 @@ const StyledLink = styled.a`
   line-height: inherit;
   border-bottom: 1px solid #787a76;
   transition: all .05s ease-in-out;
+
+  &:hover { 
+    border-bottom-color: #fff;
+    color: #787a76;
+  }
 `;
 
