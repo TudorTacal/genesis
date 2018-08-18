@@ -3,15 +3,13 @@ import styled from 'styled-components';
 import Content from './content/content';
 
 const AppContainer = styled.div`
-  padding: 25px;
+  padding: 0 25px 0 25px;
 `;
 
 class App extends React.Component {
   render() {
     return (
-      <AppContainer>
-        <Content />
-      </AppContainer>
+      <Content lorena="What is going on?"/>
     )
   }
 }
