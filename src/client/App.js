@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Content from './content/content';
+import HomePage from './content/content';
 
 const AppContainer = styled.div`
   padding: 0 25px 0 25px;
@@ -9,7 +9,7 @@ const AppContainer = styled.div`
 class App extends React.Component {
   render() {
     return (
-      <Content lorena="What is going on?"/>
+      <HomePage lorena="What is going on?"/>
     )
   }
 }
