@@ -6,6 +6,7 @@ export const HomePageBody = styled.p`
     line-height: 1.7;
     font-family: Inconsolata;
     font-weight: normal;
+    margin-bottom: 1.5rem;
   }
   @media screen and (min-width: 1024px) {
     font-size: 2.5rem;

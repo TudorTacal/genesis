@@ -9,7 +9,7 @@ const AppContainer = styled.div`
 class App extends React.Component {
   render() {
     return (
-      <HomePage lorena="What is going on?"/>
+      <HomePage />
     )
   }
 }
