@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HomePage from './content/content';
+import HomePage from './home-page/home-page';
 
 const AppContainer = styled.div`
   padding: 0 25px 0 25px;
