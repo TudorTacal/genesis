@@ -19,13 +19,9 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   try {
     const sheet = new ServerStyleSheet();
-
     const app = renderToString(sheet.collectStyles(<App />));
-
     const styles = sheet.getStyleTags();
-
     const title = 'Tudor Tacal';
-
     res.render('app',
       {
         app,
@@ -38,5 +34,15 @@ app.get('/', (req, res) => {
     console.log(e);
   }
 })
+
+app.get('/posts/:id', (req, res) => {
+  try {
+    const dummyHtml = renderToString(<h1>hello new route</h1>);
+    res.render('post', { dummyHtml });
+  }
+  catch (e) {
+    console.log(e);
+  }
+});
 
 app.listen(PORT, () => console.log(`App starting on port ${PORT}`));
