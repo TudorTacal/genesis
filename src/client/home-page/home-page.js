@@ -32,8 +32,8 @@ const HomePage = (props) => {
             Popular posts
         </HomePageBlogPostsWidgetHeader>
           <HomePageBlogPostTitle>
-            Why is my website a server side rendered application?
-        </HomePageBlogPostTitle>
+            <Link href="/posts/1" title="Why is my website a server side rendered application?" />
+          </HomePageBlogPostTitle>
         </HomePageBlogPostsWidget>
       </HomePageBlogPostsWidgetContainer>
       <HomePageFooter>
