@@ -4,9 +4,11 @@ import { renderToString } from 'react-dom/server'; // render components to stati
 import { ServerStyleSheet } from 'styled-components';
 import hogan from 'hogan-express-strict';
 import path from 'path';
+import { StaticRouter } from 'react-router-dom';
 import App from '../client/App';
 
 const app = express();
+const context = {};
 
 app.use(express.static('dist'));
 app.set('view engine', 'mustache');
@@ -19,7 +21,11 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   try {
     const sheet = new ServerStyleSheet();
-    const app = renderToString(sheet.collectStyles(<App />));
+    const app = renderToString(sheet.collectStyles(
+      <StaticRouter location={req.url} context={context}>
+        <App />
+      </StaticRouter>
+    ));
     const styles = sheet.getStyleTags();
     const title = 'Tudor Tacal';
     res.render('app',
@@ -35,10 +41,19 @@ app.get('/', (req, res) => {
   }
 })
 
-app.get('/posts/:id', (req, res) => {
+app.get('/posts', (req, res) => {
   try {
-    const dummyHtml = renderToString(<h1>hello new route</h1>);
-    res.render('post', { dummyHtml });
+    const sheet = new ServerStyleSheet();
+   
+    const app = renderToString(sheet.collectStyles(
+      <StaticRouter location={req.url} context={context}>
+        <App />
+      </StaticRouter>
+    ));
+    const styles = sheet.getStyleTags();
+    const title = 'Tudor Tacal';
+    console.log(context);
+    res.render('app', { app, styles, title });
   }
   catch (e) {
     console.log(e);

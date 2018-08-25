@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   HomePageBody,
   HomePageContainer,
@@ -9,7 +10,7 @@ import {
   HomePageBlogPostsWidgetHeader,
   HomePageBlogPostTitle,
   GridContainer,
-  Link,
+  MyLink,
 } from '../presentational';
 
 const HomePage = (props) => {
@@ -20,7 +21,7 @@ const HomePage = (props) => {
           I'm Tudor Tacal
         </HomePageTitle>
         <HomePageBody>
-          Scrum Master & Full Stack Javascript developer at <Link href="https://www.mendeley.com" title="Mendeley" />.
+          Scrum Master & Full Stack Javascript developer at <MyLink href="https://www.mendeley.com" title="Mendeley" target="_blank"/>.
           I build high performance web applications using React & NodeJS. Also
           preparing to become a dad. Exciting times!
           <br />
@@ -32,7 +33,9 @@ const HomePage = (props) => {
             Popular posts
         </HomePageBlogPostsWidgetHeader>
           <HomePageBlogPostTitle>
-            <Link href="/posts/1" title="Why is my website a server side rendered application?" />
+            <Link to="/posts">
+              Why is my website a server side rendered application?
+            </Link>
           </HomePageBlogPostTitle>
         </HomePageBlogPostsWidget>
       </HomePageBlogPostsWidgetContainer>

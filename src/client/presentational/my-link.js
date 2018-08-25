@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Link(props) {
+export default function MyLink(props) {
   return (
     <StyledLink 
       href={props.href}
-      target="_blank"
     >
       {props.title}
     </StyledLink>
