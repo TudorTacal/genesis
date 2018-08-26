@@ -1,17 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export default function MyLink(props) {
-  return (
-    <StyledLink 
-      href={props.href}
-    >
-      {props.title}
-    </StyledLink>
-  )
-}
-
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   color: #3e3f3d;
   text-decoration: none;
   line-height: inherit;
@@ -23,4 +13,6 @@ const StyledLink = styled.a`
     color: #787a76;
   }
 `;
+
+export default StyledLink;
 

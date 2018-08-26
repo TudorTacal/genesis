@@ -7,7 +7,7 @@ import { HomePageBlogPostsWidget } from './home-page-blog-post-widget';
 import { HomePageBlogPostsWidgetContainer } from './home-page-blog-posts-widget-container';
 import { HomePageBlogPostsWidgetHeader } from './home-page-blog-post-widget-header';
 import { GridContainer } from './grid-container';
-import MyLink from './my-link';
+import StyledLink from './styled-link';
 
 export {
   HomePageBody,
@@ -19,5 +19,5 @@ export {
   HomePageBlogPostsWidgetContainer,
   HomePageBlogPostsWidgetHeader,
   GridContainer,
-  MyLink,
+  StyledLink,
 };
