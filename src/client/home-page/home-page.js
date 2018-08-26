@@ -32,7 +32,7 @@ const HomePage = (props) => {
             Popular posts
         </HomePageBlogPostsWidgetHeader>
           <HomePageBlogPostTitle>
-            <StyledLink to="/posts">
+            <StyledLink to="/posts/why-is-my-website-a-server-side-rendered-application">
               Why is my website a server side rendered application?
             </StyledLink>
           </HomePageBlogPostTitle>
