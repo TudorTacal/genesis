@@ -19,8 +19,9 @@ const StyledNotFound = styled.div`
 const NotFound = () => {
   return(
     <StyledNotFound>
-      <h1>Ups, the page does not exit</h1>
-      <small><i>This page in progress too</i></small>
+      <h1>404</h1>
+      <h1>The page you're looking for does not exist</h1>
+      <small><i>This NotFound page is still in progress :)</i></small>
     </StyledNotFound>
   )
 }

@@ -16,7 +16,7 @@ class App extends React.Component {
         <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/posts/:id" render={(props) => (
-          props.match.params.id === posts[0] ? 
+           posts.find(el => el === props.match.params.id) ? 
           <BlogPost {...props} /> :
           <NotFound />
         )} />
