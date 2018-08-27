@@ -11,6 +11,7 @@ import {
   GridContainer,
   StyledLink,
 } from '../presentational';
+import posts from '../../model/posts';
 
 const HomePage = (props) => {
   return (
@@ -32,7 +33,7 @@ const HomePage = (props) => {
             Popular posts
         </HomePageBlogPostsWidgetHeader>
           <HomePageBlogPostTitle>
-            <StyledLink to="/posts/why-is-my-website-a-server-side-rendered-application">
+            <StyledLink to={`/posts/${posts[0]}`}>
               Why is my website a server side rendered application?
             </StyledLink>
           </HomePageBlogPostTitle>
