@@ -21,9 +21,14 @@ const HomePage = (props) => {
           I'm Tudor Tacal
         </HomePageTitle>
         <HomePageBody>
-          Scrum Master & Full Stack Javascript developer at <StyledLink to="//www.mendeley.com"target="_blank">Mendeley</StyledLink>.
-          I build high performance web applications using React & NodeJS. Also
-          preparing to become a dad. Exciting times!
+          Scrum Master & Full Stack Javascript developer at {" "} 
+          <StyledLink to="//www.mendeley.com"target="_blank">
+            Mendeley
+          </StyledLink>.
+          <br />
+          <br />
+          CODING is my passion - I use React and NodeJS to build high performance web applications. 
+          Agile, Lean - also preparing to become a dad.  Exciting times!
           <br />
         </HomePageBody>
       </HomePageContainer>
