@@ -24,7 +24,7 @@ const HomePage = (props) => {
           Scrum Master & Full Stack Javascript developer at {" "} 
           <StyledLink to="//www.mendeley.com"target="_blank">
             Mendeley
-          </StyledLink>.
+          </StyledLink>. 
           <br />
           <br />
           CODING is my passion - I use React and NodeJS to build high performance web applications. 
