@@ -5,9 +5,6 @@ import HomePage from './home-page/home-page';
 import BlogPost from './blog-post/blog-post';
 import NotFound from './not-found/not-found';
 import posts from '../model/posts';
-const AppContainer = styled.div`
-  padding: 0 25px 0 25px;
-`;
 
 class App extends React.Component {
   render() {
