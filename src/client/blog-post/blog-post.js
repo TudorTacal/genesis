@@ -77,7 +77,6 @@ const BlogPost = () => {
         </p>
       </BlogPostBody>
       <BlogPostFooter>
-        <small><i>work in progress</i></small>
       </BlogPostFooter>
     </StyledBlogPost>
   )

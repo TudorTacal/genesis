@@ -21,7 +21,6 @@ const PORT = process.env.PORT || 3000;
 app.get('*', (req, res) => {
   try {
     const sheet = new ServerStyleSheet();
-    
     const app = renderToString(sheet.collectStyles(
       <StaticRouter location={req.url} context={{}}>
         <App />
