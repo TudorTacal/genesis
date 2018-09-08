@@ -71,7 +71,6 @@ const StyledBlogPost = styled.div`
 `;
 
 const BlogPost = (props) => {
-  console.log(props.match.params, 'props.match.params');
   return (
     <React.Fragment>
       {
@@ -102,7 +101,7 @@ const BlogPost = (props) => {
         </BlogPostHeader>
           <BlogPostBody>
             <p>
-              One of these days, I asked my UX colleague if the UX guild is agile, that is
+              One of these days, I asked my UX colleague if their guild is agile, that is
               if they follow the methodologies and understand their use.
               Immediately a conversation started about what agile is and how
               different teams and people understand or not it's spirit and practices.
@@ -110,7 +109,7 @@ const BlogPost = (props) => {
             <p>
               For me, being agile in software development means to iterate often and deliver
               small, valuable features that get in front of the users in good time. Of course the ceremonies,
-              frameworks, tools and processes there for a reason. But they are a helper, not the main actor,
+              frameworks, tools and processes are there for a reason. But they are just helpers, not the main actor,
               they empower and assist in achieving the goal. Then what is the goal? It varies, 
               for me is to create web applications fast, qualitatively, and learn as much as I can about 
               the parts I'm passionate about. 
@@ -125,22 +124,29 @@ const BlogPost = (props) => {
             </p>
             <p>
               While I was writing the text for this second post, I was also preparing to deploy the code so that
-              the changes would be available to all my friends across the world. To achieve this all it takes is:
-              <it>git add;</it> <it>git commit;</it> <it>git push;</it> and <it>npm run heroku;</it>. 
+              the changes would be available to all my friends across the world. To achieve this all it takes is 4 commands
+              {" "} <i>git add;</i> <i>git commit;</i> <i>git push;</i> and <i>npm run heroku</i>. 
               This ability to ship software that serves a purpose, even a simple one, of delivering a 
               message, is in my opinion, the core of agile software development and delivery.
             </p>
-          </BlogPostBody>
-          <BlogPostFooter>
             <p>
-            If you have feedback not only about the website but also about the tech I'm using, my writing, 
-            or just to say hello please do get in touch. I like to connect with techies and 
+              As for the end goal of this project, there isn't one. For the moment I'm handcrafting my personal website,
+              with the idea of creating a platform. Maybe in the future, it will serve as a good foundation for a different
+              kind of web application, one that is fast, scalable, secure and ready to receive new features.
+              The idea is to have a playground, a breakable toy that I can experiment and enjoy working with while I'm 
+              learning and become a better developer.
+            </p>
+            <p>
+            If you have any feedback about the website 
+            or just want to say hello please do get in touch. I like to connect with techies and 
             kindred spirits of any kind.
             </p>
             <p>
               Twitter - for tech stuff.
               Instagram - for, hopefully, cool photos. 
             </p>
+          </BlogPostBody>
+          <BlogPostFooter>
           </BlogPostFooter>
         </StyledBlogPost>
       }
