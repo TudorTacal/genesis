@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StyledLink } from '../presentational';
 
 const BlogPostHeader = styled.div`
   grid-area: header;
@@ -116,17 +117,18 @@ const BlogPost = (props) => {
             </p>
             <p>
               To prove my point, I am developing this website in real time. My baby girl is due on
-              the 2nd of October so I still find a few hours per week to work on my personal projects.
+              the 31th of October so I still find a few hours per week to work on my personal projects.
               Even as you read through this post I am ready to implement a new feature, be it of a technical
               nature like <it>Webpack Dev Server</it> or something visible on the screen like a <it>navigation to 
-              the home page</it>. I use Waffle & Trello to manage the project; you can see some items in my backlog 
-              on Github.
+              the home page</it>. I use <StyledLink to="//www.waffle.io" target="_blank">Waffle</StyledLink> & {" "} 
+              <StyledLink to="//www.trello.com" target="_blank">Trello</StyledLink> to manage the project; you can see some items in my backlog 
+              on <StyledLink to="//github.com/TudorTacal/genesis/issues" target="_blank">Github</StyledLink>
             </p>
             <p>
               While I was writing the text for this second post, I was also preparing to deploy the code so that
               the changes would be available to all my friends across the world. To achieve this all it takes is 4 commands
               {" "} <i>git add;</i> <i>git commit;</i> <i>git push;</i> and <i>npm run heroku</i>. 
-              This ability to ship software that serves a purpose, even a simple one, of delivering a 
+              This ability to ship software that serves a purpose, even a simple one of delivering a 
               message, is in my opinion, the core of agile software development and delivery.
             </p>
             <p>
@@ -142,8 +144,12 @@ const BlogPost = (props) => {
             kindred spirits of any kind.
             </p>
             <p>
-              Twitter - for tech stuff.
-              Instagram - for, hopefully, cool photos. 
+            <StyledLink to="//twitter.com/Tudor_Tacal" target="_blank">
+              Twitter
+            </StyledLink> - for tech stuff. {" "}
+            <StyledLink to="//www.instagram.com/tudortacal/" target="_blank">
+              Instagram
+            </StyledLink> - for, hopefully, cool photos. 
             </p>
           </BlogPostBody>
           <BlogPostFooter>
