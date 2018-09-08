@@ -11,6 +11,9 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  optimization: {
+    minimize: true,
+  },
   module: {
     rules: [
       {
