@@ -119,8 +119,8 @@ const BlogPost = (props) => {
               To prove my point, I am developing this website in real time. My baby girl is due on
               the 31th of October so I still find a few hours per week to work on my personal projects.
               Even as you read through this post I am ready to implement a new feature, be it of a technical
-              nature like <it>Webpack Dev Server</it> or something visible on the screen like a <it>navigation to 
-              the home page</it>. I use <StyledLink to="//www.waffle.io" target="_blank">Waffle</StyledLink> & {" "} 
+              nature like <i>Webpack Dev Server</i> or something visible on the screen like a <i>navigation to 
+              the home page</i>. I use <StyledLink to="//www.waffle.io" target="_blank">Waffle</StyledLink> & {" "} 
               <StyledLink to="//www.trello.com" target="_blank">Trello</StyledLink> to manage the project; you can see some items in my backlog 
               on <StyledLink to="//github.com/TudorTacal/genesis/issues" target="_blank">Github</StyledLink>
             </p>
