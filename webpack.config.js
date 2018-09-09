@@ -5,7 +5,12 @@ const path = require('path');
 module.exports = {
   devtool: 'source-map',
   mode: 'development',
-  entry: './src/client/index.js',
+  entry: {
+    index: [
+      "webpack-hot-middleware/client",
+      "./src/client/index.js",
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -18,13 +23,23 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: {
-          loader: 'babel-loader',
+        loader: 'babel-loader',
+        query: {
+          "env": {
+            "development": {
+              "plugins": ["react-hot-loader/babel"],
+            }
+          },
         },
         exclude: /node_modules/,
       },
     ]
   },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
+  ]
 }
 
 
