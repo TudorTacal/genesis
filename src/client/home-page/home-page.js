@@ -25,7 +25,7 @@ const HomePage = (props) => {
           <StyledLink to="//www.mendeley.com" target="_blank">
             Mendeley  
           </StyledLink>
-          {" "} & Scrum Master .
+          {" "} & Scrum Master.
           <br />
           <br />
           CODING is my passion - I use React and NodeJS to build high performance web applications.

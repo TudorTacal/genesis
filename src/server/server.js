@@ -14,12 +14,6 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 
 const app = express();
 const compiler = webpack(webpackConfig);
-
-app.use(express.static('dist'));
-app.set('view engine', 'mustache');
-const templatePath = path.join(__dirname, 'templates/');
-app.engine('mustache', hogan);
-app.set('views', templatePath);
 // webpack hmr
 app.use(
     webpackMiddleware(compiler, {
@@ -29,6 +23,12 @@ app.use(
   })
 );
 app.use(webpackHotMiddleware(compiler));
+app.use(express.static('dist'));
+app.set('view engine', 'mustache');
+const templatePath = path.join(__dirname, 'templates/');
+app.engine('mustache', hogan);
+app.set('views', templatePath);
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -54,5 +54,12 @@ app.get('*', (req, res) => {
     console.log(e);
   }
 })
+
+compiler.plugin('done', function() {
+  console.log("Clearing /client/ module cache from server");
+  Object.keys(require.cache).forEach(function(id) {
+    if (/[\/\\]client[\/\\]/.test(id)) delete require.cache[id];
+  });
+});
 
 app.listen(PORT, () => console.log(`App starting on port ${PORT}`));
