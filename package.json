@@ -10,7 +10,6 @@
     "start:webpack": "webpack --mode development --watch",
     "start:devserver": "babel-node src/server/server.js",
     "start:dev": "concurrently -k -r 'npm run start:devserver' 'npm run start:webpack'",
-    "build": "webpack",
     "heroku": "git push heroku master"
   },
   "keywords": [
@@ -27,6 +26,8 @@
   "author": "Tudor Tacal",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/node": "^7.0.0",
     "express": "^4.16.3",
     "hogan-express-strict": "^0.5.4",
     "react": "^16.4.1",
