@@ -7,7 +7,8 @@
     "start": "concurrently -k -r 'npm run start:server' 'npm run start:webpack'",
     "start:server": "nodemon -e js,mustache src/server/server.js --exec babel-node",
     "start:webpack": "webpack --mode development --watch",
-    "start:dev": "webpack-dev-server",
+    "start:devserver": "babel-node src/server/server.js",
+    "start:dev": "concurrently -k -r 'npm run start:devserver' 'npm run start:webpack'",
     "build": "webpack",
     "heroku": "git push heroku master"
   },

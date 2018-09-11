@@ -4,9 +4,11 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
 hydrate(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.getElementById('root')
 );
+
+
 

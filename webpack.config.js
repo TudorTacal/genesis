@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path');
 
 module.exports = {
-  devtool: 'source-map',
   mode: 'development',
   entry: {
     index: [
@@ -24,23 +23,18 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          "env": {
-            "development": {
-              "plugins": ["react-hot-loader/babel"],
-            }
-          },
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          }
         },
         exclude: /node_modules/,
       },
     ]
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new CleanWebpackPlugin(path.resolve(__dirname, 'dist')),
   ]
 }
 

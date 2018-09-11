@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import { hot } from 'react-hot-loader'
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './home-page/home-page';
 import BlogPost from './blog-post/blog-post';
@@ -24,4 +24,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(module)(App);

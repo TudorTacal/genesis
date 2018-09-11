@@ -14,6 +14,8 @@ Mustache: https://mustache.github.io/mustache.5.html
 
 HMR: https://daveceddia.com/create-react-app-express-backend/
 REACT-HOT-LOADER: https://github.com/gaearon/react-hot-loader
+Options:
+- remove nodemon from dev and use babel-node src/server/server.js
 TODOS: 
 
 - check the ESLint altervative recommended by Andy or try JSLint

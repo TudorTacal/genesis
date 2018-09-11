@@ -6,15 +6,14 @@ import { ServerStyleSheet } from 'styled-components';
 import hogan from 'hogan-express-strict';
 import path from 'path';
 import { StaticRouter, matchPath } from 'react-router-dom';
-import webpackMiddleware from 'webpack-dev-middleware';
 import routes from '../shared/routes';
 import App from '../client/App';
+import webpackMiddleware from 'webpack-dev-middleware';
 import webpackConfig from '../../webpack.config';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
 const app = express();
 const compiler = webpack(webpackConfig);
-// webpack hmr
 app.use(
     webpackMiddleware(compiler, {
       noInfo: true,
@@ -54,12 +53,5 @@ app.get('*', (req, res) => {
     console.log(e);
   }
 })
-
-compiler.plugin('done', function() {
-  console.log("Clearing /client/ module cache from server");
-  Object.keys(require.cache).forEach(function(id) {
-    if (/[\/\\]client[\/\\]/.test(id)) delete require.cache[id];
-  });
-});
 
 app.listen(PORT, () => console.log(`App starting on port ${PORT}`));
