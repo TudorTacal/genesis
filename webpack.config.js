@@ -4,7 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: process.NODE_ENV === 'production' ?
+   'production' : 'development',
   entry: {
     index: [
       "webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr",
@@ -35,6 +36,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(['dist']),
   ]
 }
 

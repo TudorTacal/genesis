@@ -4,6 +4,7 @@
   "description": "My coolest personal website build from scratch using cutting edge full JS stack.",
   "main": "index.js",
   "scripts": {
+    "start:heroku": "babel-node src/server/server.js",
     "start": "concurrently -k -r 'npm run start:server' 'npm run start:webpack'",
     "start:server": "nodemon -e js,mustache src/server/server.js --exec babel-node",
     "start:webpack": "webpack --mode development --watch",
