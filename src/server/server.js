@@ -30,7 +30,6 @@ const templatePath = path.join(__dirname, 'templates/');
 app.engine('mustache', hogan);
 app.set('views', templatePath);
 
-
 const PORT = process.env.PORT || 3000;
 
 app.get('*', (req, res) => {
