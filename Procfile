@@ -1,1 +1,1 @@
-web: ./node_modules/babel-cli/bin/babel-node.js src/server/server.js
+web: npm run start:heroku

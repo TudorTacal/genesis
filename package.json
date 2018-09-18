@@ -11,7 +11,7 @@
     "start:webpack": "webpack --watch",
     "start:dev-server": "babel-node src/server/server.js",
     "start:dev": "NODE_ENV=development concurrently -k -r 'npm run start:dev-server' 'npm run start:webpack'",
-    "start:test-heroku": "NODE_ENV=production concurrently -k -r 'npm run start:dev-server' 'npm run start:webpack'",
+    "start:test-heroku": "NODE_ENV=production concurrently -k -r 'npm run start:heroku-server' 'npm run start:webpack'",
 
     "heroku": "git push heroku master"
   },
