@@ -13,15 +13,17 @@ import webpackConfig from '../../webpack.config';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
 const app = express();
-const compiler = webpack(webpackConfig);
-app.use(
-    webpackMiddleware(compiler, {
-      noInfo: true,
-      lazy: false,
-      publicPath: webpackConfig.output.publicPath
-  })
-);
-app.use(webpackHotMiddleware(compiler));
+if (process.env.NODE_ENV !== 'production') {
+  const compiler = webpack(webpackConfig);
+  app.use(
+      webpackMiddleware(compiler, {
+        noInfo: true,
+        lazy: false,
+        publicPath: webpackConfig.output.publicPath
+    })
+  );
+  app.use(webpackHotMiddleware(compiler));
+}
 app.use(express.static('dist'));
 app.set('view engine', 'mustache');
 const templatePath = path.join(__dirname, 'templates/');

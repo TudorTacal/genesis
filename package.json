@@ -4,12 +4,14 @@
   "description": "My coolest personal website build from scratch using cutting edge full JS stack.",
   "main": "index.js",
   "scripts": {
-    "start:heroku": "./node_modules/.bin/babel-node src/server/server.js",
-    "start": "concurrently -k -r 'npm run start:server' 'npm run start:webpack'",
+    "start:heroku": "NODE_ENV=production ./node_modules/.bin/babel-node src/server/server.js",
+    "start": "NODE_ENV=development concurrently -k -r 'npm run start:server' 'npm run start:webpack'",
     "start:server": "nodemon -e js,mustache src/server/server.js --exec babel-node",
     "start:webpack": "webpack --mode development --watch",
-    "start:dev-server": "babel-node src/server/server.js",
-    "start:dev": "concurrently -k -r 'npm run start:devserver' 'npm run start:webpack'",
+    "start:dev-server": "NODE_ENV=production babel-node src/server/server.js",
+    "start:dev": "concurrently -k -r 'npm run start:dev-server' 'npm run start:webpack'",
+    "start:dev-heroku": "NODE_ENV=production concurrently -k -r 'npm run start:dev-server' 'npm run start:webpack'",
+
     "heroku": "git push heroku master"
   },
   "keywords": [

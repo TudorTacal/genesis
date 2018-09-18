@@ -1,16 +1,17 @@
 const webpack = require('webpack');
-const nodeExternals = require('webpack-node-externals');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path');
 
 module.exports = {
-  mode: process.NODE_ENV === 'production' ?
-   'production' : 'development',
+  mode: process.env.NODE_ENV === 'production' ?
+    'production' : 'development',
   entry: {
-    index: [
-      "webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr",
-      "./src/client/index.js",
-    ]
+    index: process.env.NODE_ENV === 'production' ?
+      "./src/client/production-index.js" :
+      [
+        "webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr",
+        "./src/client/development-index.js",
+      ]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -37,6 +38,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(['dist']),
+    new webpack.DefinePlugin({ "process.env": { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } })
   ]
 }
 
