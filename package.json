@@ -12,7 +12,6 @@
     "start:dev-server": "babel-node src/server/server.js",
     "start:dev": "NODE_ENV=development concurrently -k -r 'npm run start:dev-server' 'npm run start:webpack'",
     "start:test-heroku": "NODE_ENV=production concurrently -k -r 'npm run start:heroku-server' 'npm run start:webpack'",
-
     "heroku": "git push heroku master"
   },
   "keywords": [
@@ -47,6 +46,10 @@
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.0",
+    "eslint": "^5.6.0",
+    "eslint-config-semistandard": "^12.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "nodemon": "^1.17.5",
     "styled-components": "^3.3.3",
     "universal-hot-reload": "^1.0.6",

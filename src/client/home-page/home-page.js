@@ -23,7 +23,7 @@ const HomePage = (props) => {
         <HomePageBody>
           Full Stack Javascript developer at {" "}
           <StyledLink to="//www.mendeley.com" target="_blank">
-            Mendeley  
+            Mendeley
           </StyledLink>
           {" "} & Scrum Master.
           <br />
@@ -38,7 +38,7 @@ const HomePage = (props) => {
           <HomePageBlogPostsWidgetHeader>
             Popular posts
         </HomePageBlogPostsWidgetHeader>
-        {/* map posts */}
+          {/* map posts */}
           <HomePageBlogPostTitle>
             <StyledLink to={`/posts/${posts[0]}`}>
               Why is my website a server side rendered application?

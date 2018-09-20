@@ -13,8 +13,7 @@ const StyledNotFound = styled.div`
   grid-row: 2 / 4;
   border-left: 1px solid grey;
   margin-top: -20px;
-  ;
-`
+`;
 
 const NotFound = () => {
   return(
