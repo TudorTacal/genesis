@@ -9,6 +9,7 @@
   ],
   "plugins": [
     "transform-runtime",
+    "transform-class-properties",
     "transform-object-rest-spread",
     "react-hot-loader/babel",
     ["babel-plugin-styled-components" , { "ssr": true }]
