@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
-
+console.log(process.env);
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ?
     'production' : 'development',
@@ -41,8 +41,9 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new Dotenv(),
     new webpack.DefinePlugin({
-      'process.env.AUTH0_CLIENT_ID': JSON.stringify(process.env.AUTH0_CLIENT_ID),
-      'process.env.AUTH0_CLIENT_DOMAIN': JSON.stringify(process.env.AUTH0_CLIENT_DOMAIN)
+      'process.env.AUTH0_CLIENT_ID': process.env.AUTH0_CLIENT_ID,
+      'process.env.AUTH0_CLIENT_DOMAIN': process.env.AUTH0_CLIENT_DOMAIN,
+      'process.env.variable': JSON.stringify('variable'), 
     }),    
   ],
 }
