@@ -14,6 +14,7 @@ class Header extends React.Component {
     );
   }
   render () {
+    console.log(process.env);
     return(
       <a onClick={this.showLock}>Sign In</a>  
     )
