@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Auth0Lock from 'auth0-lock';
+import Lock from '../../utils/auth0lock';
 
 class Header extends React.Component {
   showLock = () => {
@@ -8,13 +8,9 @@ class Header extends React.Component {
     this.lock.show();
   };
   componentDidMount() {
-    this.lock = new Auth0Lock(
-      process.env.AUTH0_CLIENT_ID,
-      process.env.AUTH0_CLIENT_DOMAIN,
-    );
+    this.lock = Lock;
   }
   render () {
-    console.log(process.env);
     return(
       <a onClick={this.showLock}>Sign In</a>  
     )
