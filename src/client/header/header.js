@@ -8,8 +8,6 @@ class Header extends React.Component {
     this.lock.show();
   };
   componentDidMount() {
-    console.log(process.env.AUTH0_CLIENT_ID, 'AUTH0_CLIENT_ID');
-    console.log(process.env.variable, 'variable');
     this.lock = new Auth0Lock(
       process.env.AUTH0_CLIENT_ID,
       process.env.AUTH0_CLIENT_DOMAIN,
