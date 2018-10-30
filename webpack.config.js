@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
-console.log(process.env);
+
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ?
     'production' : 'development',

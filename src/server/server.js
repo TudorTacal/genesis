@@ -13,7 +13,6 @@ import webpackConfig from '../../webpack.config';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
 const app = express();
-console.log(process.env.AUTH0_CLIENT_ID, '--------------------------');
 if (process.env.NODE_ENV !== 'production') {
   const compiler = webpack(webpackConfig);
   app.use(
