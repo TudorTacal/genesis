@@ -21,39 +21,21 @@ const HomePage = (props) => {
           I'm Tudor Tacal
         </HomePageTitle>
         <HomePageBody>
-          Full Stack Javascript developer at {" "}
-          <StyledLink to="//www.mendeley.com" target="_blank">
-            Mendeley
+          Senior Full Stack Javascript developer at {" "}
+          <StyledLink to="//www.beamly.com" target="_blank">
+            Beamly
           </StyledLink>
           {" "} & Scrum Master.
           <br />
           <br />
           CODING is my passion - I use React and NodeJS to build high performance web applications.
-          Agile, Lean - also preparing to become a dad.  Exciting times!
+          Agile, Lean - also proud father of a little dragon girl.  Exciting times!
           <br />
         </HomePageBody>
+        <HomePageFooter>
+          Copyright © 2018 Tudor Tacal
+        </HomePageFooter>
       </HomePageContainer>
-      <HomePageBlogPostsWidgetContainer>
-        <HomePageBlogPostsWidget>
-          <HomePageBlogPostsWidgetHeader>
-            Popular posts
-        </HomePageBlogPostsWidgetHeader>
-          {/* map posts */}
-          <HomePageBlogPostTitle>
-            <StyledLink to={`/posts/${posts[0]}`}>
-              Why is my website a server side rendered application?
-            </StyledLink>
-          </HomePageBlogPostTitle>
-          <HomePageBlogPostTitle>
-            <StyledLink to={`/posts/${posts[1]}`}>
-              What am I building? Agile software delivery 💻
-              </StyledLink>
-          </HomePageBlogPostTitle>
-        </HomePageBlogPostsWidget>
-      </HomePageBlogPostsWidgetContainer>
-      <HomePageFooter>
-        Copyright © 2018 Tudor Tacal
-      </HomePageFooter>
     </GridContainer>
   );
 };

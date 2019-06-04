@@ -7,7 +7,8 @@ export const HomePageFooter = styled.p`
   @media screen and (min-width: 1024px) {
     font-size: 1.2rem;
   }
-  padding-left: 25px;
+  display: block;
+  // padding-left: 25px;
   font-family: Cutive Mono;
   font-weight: normal;
   color: #3e3f3d;
