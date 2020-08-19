@@ -29,7 +29,7 @@
   "author": "Tudor Tacal",
   "license": "ISC",
   "dependencies": {
-    "auth0-lock": "^11.10.0",
+    "auth0-lock": "^11.26.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.5",
     "babel-plugin-styled-components": "^1.5.1",
